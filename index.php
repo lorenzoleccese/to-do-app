@@ -13,11 +13,10 @@ if(isset($_POST['todo_text'], $_POST['todo_date'])){
       $_SESSION['todo_date'][] = $_POST['todo_date'];
       $_SESSION['todo_complete'] = array_combine($_SESSION['todo'], $_SESSION['todo_date']);
       header("Location: /to-do-app/", true,301); 
-      
       die();
     }
     else{
-      $errore = "caratteri speciali ammessi: ! ' -";
+      $errore = "caratteri speciali ammessi: ! \' -";
       $errore_colore = "errore";
     }
 
@@ -84,6 +83,7 @@ if(isset($_POST['reset'])){
                     <?php
 
                     ?>
+
 
             <p>Non dimenticare niente! Ti aiuta To-Do App</p>
             <div class="large-12 cell">
